@@ -56,6 +56,7 @@ export default React.createClass({
     this.setState({confirmScreen: false});
   },
   cancelClick(e) {
+    e.preventDefault();
     this.refs.check.checked = false;
     this.setState({confirmScreen: false});
   }

@@ -10,10 +10,16 @@ const container = document.getElementById('container');
 
 const Router = Backbone.Router.extend({
   routes: {
-    '' : 'home'
+    ''            : 'home',
+    'readingList' : 'list'
   },
   home() {
     ReactDom.render(<Document doc={store.doc} />, container)
+  },
+  list() {
+    console.log('List rendered');
+    //the list function needs a collection made to generate the different
+    //the different docs to read through
   }
 });
 
